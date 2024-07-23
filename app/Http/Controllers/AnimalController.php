@@ -13,7 +13,6 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        //
         $animals=Animal::all();
         return view('animals', compact('animals'));
     }
@@ -24,7 +23,10 @@ class AnimalController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $animal= Animal::findOrFail($id);
+
+        return view ('show' , compact('animal'));
+
     }
 
 
