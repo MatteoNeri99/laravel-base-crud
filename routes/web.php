@@ -26,6 +26,8 @@ Route::get('/show/{id}', [AnimalController::class , 'show'])->name('animal.show'
 
 Route::put('/animal/{animal}', [AnimalController::class , 'update'])->name('animal.update');
 
+Route::delete('/animal/{animal}', [AnimalController::class , 'destroy'])->name('animal.destroy');
+
 
 
 

@@ -26,6 +26,13 @@
                 <td>{{$animal->provenienza}}</td>
                 <td> <a href="{{ Route('animal.show', $animal->id) }}" class="btn btn-primary">Scopri di più</a> </td>
                 <td> <a href="{{ Route('animal.edit', $animal) }}" class="btn btn-success">Modifica</a> </td>
+                <td><form action="{{ Route('animal.destroy', $animal) }}" method="POSt" class="d-inline-block">
+
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-warning">Elimina</button>
+
+                </form></td>
 
             </tbody>
         @endforeach
