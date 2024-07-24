@@ -17,7 +17,7 @@
                 Colore: {{$animal->colore}} <br>
                 Microchip id: {{$animal->microchip_id}} <br>
             </p>
-            <a href="{{ route('animal.index') }}" class="card-link">show all animals</a>
+            <a href="{{ route('animal.index') }}" class="btn btn-primary card-link">show all animals</a>
             </div>
         </div>
     </div>

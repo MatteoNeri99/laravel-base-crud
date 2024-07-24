@@ -2,7 +2,11 @@
 
 
 @section('main-content')
+
+
 <div class="col-12 container p-5">
+    <a href="{{ route('animal.create') }}" class="btn btn-secondary text-center">aggiungi un animale</a>
+
     <table class="table table-hover">
         <thead>
             <tr>
@@ -20,7 +24,8 @@
                 <td>{{$animal->nome_comune}}</td>
                 <td>{{$animal->sesso}}</td>
                 <td>{{$animal->provenienza}}</td>
-                <td> <a href="{{ Route('animal.show', $animal->id) }}" class="btn btn-primary">scopri di più</a> </td>
+                <td> <a href="{{ Route('animal.show', $animal->id) }}" class="btn btn-primary">Scopri di più</a> </td>
+                <td> <a href="{{ Route('animal.edit', $animal) }}" class="btn btn-success">Modifica</a> </td>
 
             </tbody>
         @endforeach

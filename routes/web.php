@@ -20,4 +20,12 @@ Route::post('/animals', [AnimalController::class , 'store'])->name('animal.store
 
 Route::get('/animal/create', [AnimalController::class , 'create'])->name('animal.create');
 
+Route::get('/animal/{animal}/edit', [AnimalController::class , 'edit'])->name('animal.edit');
+
 Route::get('/show/{id}', [AnimalController::class , 'show'])->name('animal.show');
+
+Route::put('/animal/{animal}', [AnimalController::class , 'update'])->name('animal.update');
+
+
+
+

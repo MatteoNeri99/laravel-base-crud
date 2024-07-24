@@ -3,7 +3,7 @@
 
 @section('main-content')
 
-<h1 class="text-center fw-bolder p-5">Aggiungi un animale</h1>
+<h1 class="text-center fw-bolder p-5 ">Aggiungi un animale</h1>
 
 <div class="container">
     <div class="row justify-center">
@@ -120,6 +120,8 @@
               </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
+
+            <a href="{{ Route('animal.index') }}" class="btn btn-secondary">Torna alla lista</a>
           </form>
 
     </div>
