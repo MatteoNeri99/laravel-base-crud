@@ -314,7 +314,7 @@ class AnimalSeeder extends Seeder
                 'dieta' => 'Carnivoro',
                 'stato_di_conservazione' => 'Non minacciato',
                 'provenienza' => 'Nord America',
-                'microchip_id' => 'DEF456789012',
+                'microchip_id' => 'DEF456789712',
             ],
             [
                 'nome_comune' => 'Iguana Verde',
@@ -329,7 +329,7 @@ class AnimalSeeder extends Seeder
                 'dieta' => 'Erbivoro',
                 'stato_di_conservazione' => 'Non minacciato',
                 'provenienza' => 'Sud America',
-                'microchip_id' => 'GHI789012345',
+                'microchip_id' => 'GHI789012945',
             ],
         ];
 

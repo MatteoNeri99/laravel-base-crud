@@ -40,7 +40,23 @@ class AnimalController extends Controller
     public function update(Request $request,Animal $animal)
     {
 
-        $data=$request->all();
+
+        $data=$request->validate([
+        'nome_comune' => 'required|max:255|min:4',
+        'nome_scientifico'  => 'required|max:255|min:4',
+        'specie'  => 'required|max:50|min:4',
+        'data_di_nascita'  => 'required|date',
+        'peso' => 'required|numeric',
+        'altezza'  => 'required|numeric',
+        'sesso' => 'required|min:1|max:10',
+        'colore' => 'required|max:255|min:4',
+        'habitat' => 'required|max:255|min:4',
+        'dieta' => 'required|max:255|min:4',
+        'stato_di_conservazione' => 'required|',
+        'provenienza' => 'required|max:255|min:4',
+        'microchip_id' => 'required|max:255|min:4',
+        ]);
+
 
         // $animal->nome_comune = $data['nome_comune'];
         // $animal->nome_scientifico = $data['nome_scientifico'];
@@ -68,7 +84,21 @@ class AnimalController extends Controller
      */
     public function store(Request $request)
     {
-        $data=$request->all();
+        $data=$request->validate([
+        'nome_comune' => 'required|max:255|min:4',
+        'nome_scientifico'  => 'required|max:255|min:4',
+        'specie'  => 'required|max:50|min:4',
+        'data_di_nascita'  => 'required|date',
+        'peso' => 'required|numeric',
+        'altezza'  => 'required|numeric',
+        'sesso' => 'required|min:1|max:10',
+        'colore' => 'required|max:255|min:4',
+        'habitat' => 'required|max:255|min:4',
+        'dieta' => 'required|max:255|min:4',
+        'stato_di_conservazione' => 'required|',
+        'provenienza' => 'required|max:255|min:4',
+        'microchip_id' => 'required|max:255|min:4',
+        ]);
 
 
         $newAnimal= new Animal();
@@ -87,7 +117,10 @@ class AnimalController extends Controller
         $newAnimal->microchip_id = $data['microchip_id'];
         $newAnimal->save();
 
-        return redirect()->route('animal.show' , $newAnimal->id);
+        $newAnimal=Animal::create($data);
+
+        return redirect()->route('animal.show' , $newAnimal);
+
 
 
     }
